@@ -1,0 +1,10 @@
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+Makefile
+headers/version_config.hpp
+*.o
+*.swp
+*.a
+ssl/*
