@@ -76,9 +76,6 @@ int main(int argc, char **argv)
 		logstream = &logfile;
 	}
 
-	tamandua::logger logger(*logstream);
-	tamandua::command_interpreter command_interpreter(cmd_fc);
-	boost::asio::ip::tcp::endpoint endpoint(boost::asio::ip::tcp::v4(), port);
 	tamandua::server_config conf;
 	if (vm.count("config"))
 	{
@@ -120,7 +117,10 @@ int main(int argc, char **argv)
 		std::cout << "Root password: ";
 		std::getline(std::cin, conf.root_password);
 	}
-	
+
+	tamandua::logger logger(*logstream);
+	tamandua::command_interpreter command_interpreter(cmd_fc);
+	boost::asio::ip::tcp::endpoint endpoint(boost::asio::ip::tcp::v4(), port);
 	tamandua::server server(io_service, endpoint, logger, command_interpreter, ssl_ctx);
 	// register modules
 	tamandua::base_user_module base(server, command_interpreter);
