@@ -8,3 +8,4 @@ headers/version_config.hpp
 *.swp
 *.a
 ssl/*
+bin/*

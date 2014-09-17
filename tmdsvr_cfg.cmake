@@ -3,4 +3,4 @@ set(TMDSvr_VERSION_MINOR 1)
 set(TMDSvr_VERSION_PATCH 0)
 set(TMDSvr_RELEASE_TYPE alpha)
 
-
+set(Tamandua_VERSION 0.6.0)
